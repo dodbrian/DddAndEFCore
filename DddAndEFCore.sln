@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DF2C9B5C-2F5F-4860-8BF1-27C4CE12BAD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FollowApp", "src\FollowApp\FollowApp.csproj", "{C1666781-B70A-43AF-83F1-9AE594D96DBF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,11 +29,18 @@ Global
 		{2C828D4E-838A-4D1A-A978-03AE4FF698C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C828D4E-838A-4D1A-A978-03AE4FF698C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C828D4E-838A-4D1A-A978-03AE4FF698C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1666781-B70A-43AF-83F1-9AE594D96DBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1666781-B70A-43AF-83F1-9AE594D96DBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1666781-B70A-43AF-83F1-9AE594D96DBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1666781-B70A-43AF-83F1-9AE594D96DBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F0559A07-2AF8-4E6D-903F-5F6CBAEFF7D0}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C1666781-B70A-43AF-83F1-9AE594D96DBF} = {DF2C9B5C-2F5F-4860-8BF1-27C4CE12BAD3}
 	EndGlobalSection
 EndGlobal
