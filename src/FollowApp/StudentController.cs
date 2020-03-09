@@ -57,5 +57,39 @@ namespace FollowApp
 
             return "OK";
         }
+
+        public string RegisterStudent(
+            string name, string email, long favoriteCourseId, Grade favoriteCourseGrade)
+        {
+            var favoriteCourse = Course.FromId(favoriteCourseId);
+            if (favoriteCourse == null) return "Course not found";
+
+            var student = new Student(name, email, favoriteCourse, favoriteCourseGrade);
+
+            _repository.Save(student);
+            _context.SaveChanges();
+
+            return "OK";
+        }
+
+        public string EditPersonalInfo(
+            long studentId, string name, string email, long favoriteCourseId)
+        {
+            var student = _repository.GetById(studentId);
+            if (student == null)
+                return "Student not found";
+
+            var favoriteCourse = Course.FromId(favoriteCourseId);
+            if (favoriteCourse == null)
+                return "Course not found";
+
+            student.Name = name;
+            student.Email = email;
+            student.FavoriteCourse = favoriteCourse;
+
+            _context.SaveChanges();
+
+            return "OK";
+        }
     }
 }

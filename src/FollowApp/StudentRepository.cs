@@ -1,6 +1,6 @@
 namespace FollowApp
 {
-    public class StudentRepository
+    public sealed class StudentRepository
     {
         private readonly SchoolContext _context;
 
@@ -18,6 +18,11 @@ namespace FollowApp
             _context.Entry(student).Collection(x => x.Enrollments).Load();
 
             return student;
+        }
+
+        public void Save(Student student)
+        {
+            _context.Students.Attach(student);
         }
     }
 }
